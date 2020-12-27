@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "Calibri";
+  src: url("fonts/Calibri.eot?#iefix") format("embedded-opentype"),
+    url("fonts/Calibri.woff") format("woff"),
+    url("fonts/Calibri.ttf") format("truetype"),
+    url("fonts/Calibri.svg#Calibri") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: #2f2f2f;
+  font-family: "Calibri";
+}
+
+img {
+  vertical-align: baseline;
+  width: 320px;
+  height: 200px;
+}
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a {
+  color: royalblue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: midnightblue;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+  list-style: none;
+}
+
+/*--------------------------------------------------------------
+# Flex
+--------------------------------------------------------------*/
+.flex {
+  display: flex !important;
+}
+
+@media screen and (min-width: 992px) {
+  .flex-lg {
+    display: flex !important;
+  }
+}
+
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+.btn.gradient-bg {
+  padding: 18px 46px;
+  border: 0;
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(171, 0, 229, 1) 0%,
+    rgba(88, 20, 121, 1) 100%
+  ); /* ff3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(0%, rgba(88, 20, 121, 1)),
+    color-stop(100%, rgba(171, 0, 229, 1))
+  ); /* safari4+,chrome */
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(171, 0, 229, 1) 0%,
+    rgba(88, 20, 121, 1) 100%
+  ); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(
+    180deg,
+    rgba(171, 0, 229, 1) 0%,
+    rgba(88, 20, 121, 1) 100%
+  ); /* opera 11.10+ */
+  background: -ms-linear-gradient(
+    180deg,
+    rgba(171, 0, 229, 1) 0%,
+    rgba(88, 20, 121, 1) 100%
+  ); /* ie10+ */
+  background: linear-gradient(
+    270deg,
+    rgba(171, 0, 229, 1) 0%,
+    rgba(88, 20, 121, 1) 100%
+  ); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#581479', endColorstr='#ab00e5',GradientType=1 ); /* ie6-9 */
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Events List
+--------------------------------------------------------------*/
+.events-search {
+  padding: 100px 0;
+}
+
+.events-search input[type="date"],
+.events-search input[type="text"] {
+  width: 100%;
+  height: 75px;
+  padding: 12px 24px;
+  margin: 0 6px 30px;
+  border: 1px solid #e5e5e5;
+  font-size: 16px;
+  outline: none;
+  background: #f3f8f9;
+  color: #232127;
+}
+
+.events-search input[type="text"]::placeholder {
+  font-style: italic;
+}
+
+.events-search .btn {
+  border-color: transparent;
+  outline: none;
+  height: 65px;
+}
+
+.events-search .btn:focus {
+  background: #9a28d7;
+  outline: none;
+}
+
+/*--------------------------------------------------------------
+# Upcoming Events
+--------------------------------------------------------------*/
+.container {
+  padding-top: 50px;
+}
+
+.upcoming-events-outer {
+  padding: 700px 0 120px;
+  margin-top: -200px;
+  background: url("../images/upcoming-events-bg.jpg") no-repeat;
+  background-size: cover;
+}
+
+.upcoming-events {
+  background: #fff;
+}
+
+.upcoming-events-header {
+  padding: 20px 42px;
+  background: #9a28d7;
+}
+
+.upcoming-events-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.upcoming-events-list .upcoming-event-wrap {
+  padding: 30px 20px;
+  border-bottom: 2px solid #e0e3e4;
+}
+
+.upcoming-events-list .upcoming-event-wrap:nth-last-of-type(1) {
+  border-bottom: 0;
+}
+
+.upcoming-events-list .events-thumbnail {
+  width:50px;
+  height:50px;
+  margin: 0;
+}
+
+.upcoming-events-list .events-thumbnail img {
+  display: block;
+  width: 50%;
+}
+
+.upcoming-events-list .entry-header {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.upcoming-events-list .entry-meta .event-date {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #232127;
+  text-align: center;
+}
+
+.upcoming-events-list .entry-meta .event-date span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.upcoming-events-list .entry-title {
+  margin: 0;
+}
+
+.upcoming-events-list .entry-title a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #232127;
+  text-decoration: none;
+}
+
+.upcoming-events-list .entry-header .event-date-time {
+  font-size: 16px;
+  color: #9a28d7;
+}
+
+.upcoming-events-list .entry-header .event-speaker {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #777777;
+}
+
+.upcoming-events-list .entry-header .event-speaker {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #777777;
+}
+
+.upcoming-events-list .entry-footer {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.upcoming-events-list .entry-footer a {
+  padding-bottom: 2px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #9a28d7;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 2px solid #9a28d7;
+}
+
+@media screen and (min-width: 992px) {
+  .upcoming-events-list .upcoming-event-wrap {
+    padding: 30px 42px;
+  }
+
+  .upcoming-events-list .entry-header,
+  .upcoming-events-list .entry-footer {
+    width: 45%;
+    margin-top: 0;
+  }
+
+  .upcoming-events-list .entry-footer {
+    width: auto;
+  }
+}
+
+
+.page-heading{
+  position: relative;   
+  margin-left: 35%;
+  margin-right: 40%;
+  padding-top: 6px;
+  box-sizing: border-box;
+  box-shadow: rgb(75, 19, 204);
+  border-width: 3px;
+  text-align: center;
+  color: white;
+  background-color: rgb(151, 16, 196);
+  border-radius: 10px;
+}
+
+#rows{
+  margin-top: 30px;
+}

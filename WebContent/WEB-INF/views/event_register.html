@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterEvent</title>
+    <script src="https://kit.fontawesome.com/cf0996add5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .green-border-focus .form-control:focus {
+            border: 1px solid #8bc34a;
+            box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, .25);
+        }
+        
+        .extra-margin {
+            margin-top: 55px;
+        }
+        
+        .helper-block {
+            color: red;
+        }
+    </style>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div>
+        <!-- <div w3-include-html="header_files.html"></div>   -->
+        <div w3-include-html="Navbar.html">
+
+        </div>
+
+        <div class="card" style="width: 50%; margin-left:25%; margin-top:5%;">
+            <div class="card-body bg-light  mainForm">
+                <p class="h4 mb-4  text-center"><strong>Let's Create An Event</strong></p>
+
+                <form action="../html/success.html">
+                    <div class="form-group  green-border-focus">
+                        <label for="title">Event Title</label>
+                        <input type="text" class="form-control eventtitle" id="title" placeholder="Event Title">
+                        <span class="helper-block titlespan"></span>
+                    </div>
+                    <div class="form-group green-border-focus">
+                        <label for="description">Description of event</label>
+                        <textarea class="form-control eventdesc" id="description" rows="3"></textarea>
+                        <span class="helper-block eventdescspan"></span>
+                    </div>
+                    <div class="form-group green-border-focus">
+                        <div class="input-group">
+                            <div class="event-poster">
+                                <span class="input-group-text" id="event-poster">Event Poster</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input poster" id="uploadeventposter" aria-describedby="event-poster" accept='image/jpeg'>
+                                <label class="custom-file-label" for="uploadeventposter">Choose file</label>
+
+                            </div>
+
+                        </div>
+                        <span class="helper-block text-muted">*Only jpeg allowed</span>
+                        <br>
+                        <span class="helper-block posterspan text-primary"></span>
+                    </div>
+                    <div class="form-group green-border-focus">
+                        <div class="input-group">
+                            <div class="event-logo">
+                                <span class="input-group-text" id="event-logo">Event logo</span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="uploadeventlogo" aria-describedby="event-logo" accept='image/jpeg'>
+                                <label class="custom-file-label" for="uploadeventlogo">Choose file</label>
+                            </div>
+                        </div>
+                        <span class="helper-block text-muted">*Only jpeg allowed</span>
+                    </div>
+                    <div class="form-group green-border-focus">
+                        <label for="start-date">WorkShop Start Date</label>
+                        <input type="date" class="form-control wsstartd" id="start-date">
+                        <span class="helper-block text-muted wsstartdspan"></span>
+                    </div>
+                    <div class="form-group green-border-focus">
+                        <label for="end-date">WorkShop End Date</label>
+                        <input type="date" class="form-control wsendd" id="end-date">
+                        <span class="helper-block wsenddspan"></span>
+                    </div>
+                    <div class="form-group green-border-focus">
+                        <label for="reg-end-date">Registration End Date</label>
+                        <input type="date" class="form-control regendd" id="reg-end-date">
+                        <span class="helper-block regenddspan"></span>
+                    </div>
+
+                    <div class="form-group  green-border-focus extra-margin">
+                        <label for="orgname">Name of the organizer1</label>
+                        <input type="text" class="form-control orgname" id="orgname" placeholder="Name of the organizer">
+                        <span class="helper-block orgnamespan"></span>
+                    </div>
+                    <div class="form-group  green-border-focus">
+                        <label for="orgRoll">Organizer RollNumber1</label>
+                        <input type="text" class="form-control orgroll" id="orgRoll" placeholder="Organizer RollNumber">
+                        <span class="helper-block orgrollspan"></span>
+                    </div>
+                    <div class="form-group  green-border-focus">
+                        <label for="phn">Phone Number</label>
+                        <input type="text" class="form-control orgphn" id="phn" placeholder="Phone Number">
+                        <span class="helper-block orgphnspan"></span>
+                    </div>
+                    <div class="form-group  green-border-focus">
+                        <label for="em">Email Address</label>
+                        <input type="text" class="form-control orgemail" id="em" placeholder="Email Address">
+                        <span class="orgemailspan helper-block"></span>
+                    </div>
+                    <div class="add-user">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-user-plus"></i></button>
+                    </div>
+                    <div class="dontshow" style="display: none;">
+                        <div class="form-group  green-border-focus extra-margin">
+                            <label for="orgname">Name of the organizer2</label>
+                            <input type="text" class="form-control" id="orgname" placeholder="Name of the organizer">
+
+                        </div>
+                        <div class="form-group  green-border-focus">
+                            <label for="orgRoll">Organizer RollNumber2</label>
+                            <input type="text" class="form-control" id="orgRoll" placeholder="Organizer RollNumber">
+
+                        </div>
+                        <div class="form-group  green-border-focus">
+                            <label for="phn">Phone Number</label>
+                            <input type="tel" class="form-control" id="phn" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group  green-border-focus">
+                            <label for="em">Email Address</label>
+                            <input type="email" class="form-control" id="em" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="form-group green-border-focus extra-margin">
+                        <label for="description">Perks for participants</label>
+                        <textarea class="form-control" id="description" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control col-md-3  btn btn-primary text-center submitbut">Submit</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script>
+            includeHTML();
+        </script>
+        <script src="../js/app.js"></script>
+    </div>
+
+</body>
+
+</html>

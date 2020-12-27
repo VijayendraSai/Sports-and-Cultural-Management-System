@@ -1,0 +1,52 @@
+.start-body{
+    margin: 10px;
+    /* border: 10px solid purple; */
+    padding:10px;
+    
+    /* -moz-box-shadow: 2px  7px  38px  #d93bd9;-webkit-box-shadow: 2px  7px  38px  #d93bd9;box-shadow: 2px  7px  38px  #d93bd9; */
+}
+.carousel{
+padding-left: 25%;
+margin: 50px;
+align-content: center;
+/* background: #d93bd9; */
+width: fit-content;
+}
+.carousel-item{
+align-items: center;
+/* text-align: center; */
+/* height: 0px; Prevent carousel from being distorted if for some reason image doesn't load */
+    
+    width: 500px;
+    height: 300px;
+}
+.slide-image{
+    height: 300px;
+    width: 500px;
+}
+a:link {
+        text-decoration: none;
+        color: purple;
+        }
+
+        /* visited link */
+        a:visited {
+        text-decoration: none;
+        color:gray;
+        }
+
+        /* mouse over link */
+        a:hover {
+        text-decoration: none;
+        color:black;
+        }
+
+        /* selected link */
+        a:active {
+        text-decoration: none;
+        color: blue;
+        }
+        i{
+            color:purple;
+        }
+        
