@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+  <div w3-include-html="header_files.html"></div>
+    <div class="start-body">
+    <div w3-include-html="Navbar.html">
+        
+    </div>
+    <br><br>
+    <div class="row">
+   <%
+  try {
+    java.sql.Connection con;
+    Class.forName("com.mysql.jdbc.Driver");
+    con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/ncp_proj?useTimezone=true&serverTimezone=UTC", "root", "");
+    
+    Statement st= con.createStatement();
+    String query = "select * from achievements where username = '" + (String)session.getAttribute("username") +"'";
+    
+    ResultSet rs=st.executeQuery(query);
+    for(int i =0 ;rs.next();i++){
+    	out.println(" <div class='col'> "
+                + "<div class='card' style='width:200px'>"
+          + "<img class='card-img-top' src='/eventManagement/assets/images/cup.png' alt='Card image'>"
+           + "<div class='card-body'>"
+           + "<h4 class='card-title'>"+rs.getString(3)+ "</h4>"
+          + "<p class='card-text'> "+rs.getString(4)+ "</p>"
+          + "<a href='#' class='btn btn-outline-secondary btn-light'>Check the event details</a>"
+        + "</div>"
+      + "</div>"
++ "</div>");		
+}
+  }
+  catch(SQLException e) {
+    out.println("SQLException caught: " +e.getMessage());
+  }
+%>     
+        
+</body>
+</html>

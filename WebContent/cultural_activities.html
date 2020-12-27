@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="../css/mdb.min.css" />
+    <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+              }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+          }
+        }
+      };
+      </script>
+  </head>
+  <body>
+    <div class="start-body">
+      <!-- <div w3-include-html="header_files.html"></div>   -->
+      <div w3-include-html="Navbar.html"></div>
+
+      <br>  
+  
+  <div class="page-heading"> 
+    <h1>Culturals</h1>
+  </div>
+
+<div class="container">
+    <div class="row events-list">
+        <div class="col-12 col-lg-6 single-event" id="rows">
+            <figure class="events-thumbnail" id="images">
+                <a href="#"><img src="../images/elocution.jpeg" alt=""></a>
+            </figure>
+
+            <div class="event-content-wrap">
+                <header class="entry-header flex justify-content-between">
+                    <div>
+                        <h2 class="entry-title">Elocution</h2>
+
+                        <div class="event-location">Location : <a href="#">Amriteshwari Hall</a></div>
+
+                        <div class="event-date">August 16, 2020 @ 4:00 Pm - August 16, 2020 @ 7:00 Pm</div>
+                    </div>
+                </header>
+
+                <div class="entry-content">
+                    <p>Come Participate if not come and enjoy</p>
+                </div>
+
+                <footer class="entry-footer">
+                  <a href="success.html" class="btn">Register</a>
+                </footer>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 single-event" id="rows">
+            <figure class="events-thumbnail" id="images">
+                <a href="#"><img src="../images/craft.jpeg" alt=""></a>
+            </figure>
+
+            <div class="event-content-wrap">
+                <header class="entry-header flex justify-content-between">
+                    <div>
+                        <h2 class="entry-title">Crafting</h2>
+
+                        <div class="event-location">Location : <a href="#">Academic Block 1</a></div>
+
+                        <div class="event-date">August 15, 2020 @ 4:00 Pm - August 15, 2020 @ 5:00 Pm</div>
+                    </div>
+                </header>
+
+                <div class="entry-content">
+                    <p>Come Participate if not come and enjoy</p>
+                </div>
+
+                <footer class="entry-footer">
+                  <a href="success.html" class="btn">Register</a>
+                </footer>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 single-event" id="rows">
+            <figure class="events-thumbnail" id="images">
+                <a href="#"><img src="../images/essay.jpeg" alt=""></a>
+            </figure>
+
+            <div class="event-content-wrap">
+                <header class="entry-header flex justify-content-between">
+                    <div>
+                        <h2 class="entry-title">Essay Writing</h2>
+
+                        <div class="event-location">Location : <a href="#">Sudhamani Hall</a></div>
+
+                        <div class="event-date">August 15, 2020 @ 10:00 Am - August 15, 2020 @ 11:00 Am</div>
+                    </div>
+                </header>
+
+                <div class="entry-content">
+                    <p>Come Participate or Cheer the Team</p>
+                </div>
+
+                <footer class="entry-footer">
+                    <a href="success.html" class="btn">Register</a>
+                </footer>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 single-event" id="rows">
+            <figure class="events-thumbnail" id="images">
+                <a href="#"><img src="../images/paint.webp" alt=""></a>
+            </figure>
+
+            <div class="event-content-wrap">
+                <header class="entry-header flex justify-content-between">
+                    <div>
+                        <h2 class="entry-title">Painting</h2>
+
+                        <div class="event-location">Location : <a href="#">Academic Block 2</a></div>
+
+                        <div class="event-date">August 16, 2020 @ 8:00 Am - August 16, 2020 @ 11:00 Am</div>
+                    </div>
+                </header>
+
+                <div class="entry-content">
+                    <p>Come Participate or Come Enjoy</p>
+                </div>
+
+                <footer class="entry-footer">
+                    <a href="success.html" class="btn">Register</a>
+                </footer>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+<script>
+  includeHTML();
+</script>
+</body>
+</html>
